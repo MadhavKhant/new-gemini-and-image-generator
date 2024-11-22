@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import loadingGif from '../assets/loadingGif.gif'
-import AiImage from '../assets/AiImage.jpg'
+// import AiImage from '../assets/AiImage.jpg'
 import { Link } from "react-router-dom";
 
 
@@ -136,15 +136,15 @@ const TextToImage = () => {
         }} 
         className="w-fit flex gap-5  translate-y-2 ml-2">
         <Link to="/" 
-          className="font-bold px-4 py-2 rounded-2xl 
-          bg-black text-green-600 hover:scale-[90%] transition-all duration-300 hover:text-yellow-600"
+          className="font-bold px-4 py-2 rounded-2xl bg-black text-green-600 
+            hover:scale-90 transition-all duration-300 hover:bg-gray-700 hover:text-white"
         >
           HomePage
         </Link>
 
         <Link to="/Gemini"
-          className="font-bold px-4 py-2 rounded-2xl
-          bg-black text-green-600 hover:scale-[90%] transition-all duration-300 hover:text-yellow-600"
+          className="font-bold px-4 py-2 rounded-2xl  bg-yellow-700 text-sky-300
+          hover:scale-90 transition-all duration-300 hover:bg-gray-700 hover:text-white"
         >
           Try Gemini
         </Link>
