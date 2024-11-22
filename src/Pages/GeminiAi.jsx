@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { IoMdSend } from "react-icons/io";
 import { Context } from "../Context/Context";
 import { Link } from "react-router-dom";
-
+import Geminibg from '../assets/Geminibg.jpg'
 
 const GeminiAi = () => {
 
@@ -47,7 +47,7 @@ const GeminiAi = () => {
 
   
 
-  let bg = "https://images3.alphacoders.com/279/thumb-1920-279977.jpg"
+  let bg = Geminibg
 
   return (
     <div
@@ -67,7 +67,9 @@ const GeminiAi = () => {
       <div className="w-fit flex gap-5 translate-x-2 translate-y-2">
         <Link to="/" 
           className="font-bold px-4 py-2 rounded-2xl bg-black text-green-600 
-            hover:scale-90 transition-all duration-300 hover:bg-gray-700 hover:text-white"
+            hover:scale-90 transition-all duration-300 hover:bg-gray-700 hover:text-white
+            
+            "
         >
           HomePage
         </Link>
