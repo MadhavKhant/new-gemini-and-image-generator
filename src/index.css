@@ -16,10 +16,10 @@
     transform: translateX(300px) translateY(-200px);
   }
   50% {
-    transform: translateX(1000px) translateY(0);
+    transform: translateX(970px) translateY(0);
   }
   75% {
-    transform: translateX(600px) translateY(270px);
+    transform: translateX(600px) translateY(250px);
   }
   100% {
     transform: translateX(-10px) translateY(0);
@@ -28,7 +28,7 @@
 
 /* Wrapper for sine-wave movement */
 .sine-wave {
-  animation: sine-wave 25s infinite linear;
+  animation: sine-wave 10s infinite linear;
   display: inline-block; /* Ensures smooth animation behavior */
 }
 

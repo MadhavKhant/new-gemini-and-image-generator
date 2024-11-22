@@ -48,7 +48,8 @@ const GeminiAi = () => {
   
 
   let bg = Geminibg
-
+  //let bg = "https://as1.ftcdn.net/v2/jpg/05/71/51/90/1000_F_571519096_Jxn6PY3Xckf5XKDueIJsxEE18oBmb9rQ.jpg"
+  
   return (
     <div
       style={{
@@ -95,7 +96,7 @@ const GeminiAi = () => {
         <div className="w-[1000px] h-[400px] mx-auto overflow-y-auto rounded-3xl">
           {
             !loading && 
-            <div className="pros overflow-y-auto max-w-[900px] ml-4 mt-2 text-gray-100"
+            <div className="pros overflow-y-auto max-w-[900px] ml-4 mt-2 text-black"
               dangerouslySetInnerHTML={{__html: OutputData}}
             >
             </div> 
