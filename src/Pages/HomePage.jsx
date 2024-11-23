@@ -21,16 +21,14 @@ const HomePage = () => {
       }}
     >
 
-      <div
+      <Link to="https://my-portfolio-seven-henna-10.vercel.app/" target='_blank'
         className="font-bold px-4 py-2 rounded-2xl bg-yellow-400 text-black 
             hover:scale-90 transition-all duration-300 hover:bg-gray-700 hover:text-white
-            translate-x-[70px] translate-y-2 transform w-fit
+            translate-x-[70px] translate-y-2 transform w-fit inline-block
             "
       >
-        <Link to="https://my-portfolio-seven-henna-10.vercel.app/" target='_blank' className='w-full h-full'>
           Personal Porfolio
-        </Link>
-      </div>
+      </Link>
 
       <div className="w-fit flex gap-5  translate-y-[200px]">
         {/* Gemini Link */}
