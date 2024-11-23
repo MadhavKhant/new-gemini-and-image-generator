@@ -68,9 +68,7 @@ const GeminiAi = () => {
       <div className="w-fit flex gap-5 translate-x-2 translate-y-2">
         <Link to="/" 
           className="font-bold px-4 py-2 rounded-2xl bg-black text-green-600 
-            hover:scale-90 transition-all duration-300 hover:bg-gray-700 hover:text-white
-            
-            "
+            hover:scale-90 transition-all duration-300 hover:bg-gray-700 hover:text-white"
         >
           HomePage
         </Link>
@@ -93,10 +91,11 @@ const GeminiAi = () => {
           fontStyle: "normal",
         }}
       >
-        <div className="w-[1000px] h-[400px] mx-auto overflow-y-auto rounded-3xl">
+        <div className={`w-fit h-[400px] mx-auto overflow-y-auto rounded-3xl translate-y-[-30px] ${active ? "shadow-6xl" : ""}`}>
           {
             !loading && 
-            <div className="pros overflow-y-auto max-w-[900px] ml-4 mt-2 text-black"
+            <div className={`pros overflow-y-auto max-w-[800px] ml-4 mt-2 text-black  px-4 py-4 rounded-3xl
+              ${active ? "backdrop-blur-md " : ""}`}
               dangerouslySetInnerHTML={{__html: OutputData}}
             >
             </div> 
@@ -112,20 +111,20 @@ const GeminiAi = () => {
           }
         </div>
 
-        <div className="flex justify-center items-center w-fit mx-auto mb-5 mt-10">
+        <div className="flex justify-center items-center w-fit mx-auto mb-5 mt-10 translate-y-[-20px]">
           <textarea
             value={inputValue}
             onChange={(e) => SetinputValue(e.target.value)}
             placeholder="Enter Your prompt" 
             className=" border-[3px] border-yellow-300 w-[750px] max-h-[100px] min-h-[120px] bg-transparent
-              text-black text-lg rounded-3xl px-12 py-2"
+              text-black text-lg rounded-3xl px-12 py-2 placeholder-gray-900 backdrop-blur-md "
           >
           </textarea>
             <button
               onClick={Clickhandler}
               className="bg-yellow-50 right-6 flex justify-center hover:text-yellow-800
                hover:bg-slate-700 hover:scale-90 transition-all duration-300 
-              items-center rounded-3xl text-black w-[50px] h-[50px] translate-x-4 translate-y-[-20px]"
+              items-center rounded-3xl text-black w-[50px] h-[50px] translate-x-4 translate-y-[-35px]"
             >
               <IoMdSend />
             </button>
