@@ -8,31 +8,13 @@ const TextToImage = () => {
 
     const token = import.meta.env.VITE_TOKEN;
     const [InputText, SetInputText] = useState("");
-
     const [ImageData2, SetImageData2] = useState(null);
     const [ImageData3, SetImageData3] = useState(null);
-
     const [loading2, Setloading2] = useState(false);
     const [loading3, Setloading3] = useState(false);
-
     const [resultLoading2, SetresultLoading2] = useState(false);
     const [resultLoading3, SetresultLoading3] = useState(false);
-
     const [StartingImageSet, SetStartingImage] = useState(true);
-
-
-    // async function query4() {
-    //     const response = await fetch(
-    //         "https://api-inference.huggingface.co/models/strangerzonehf/Flux-Super-Realism-LoRA",
-    //         {
-    //             headers: { Authorization: `Bearer ${token}` },
-    //             method: "POST",
-    //             body: JSON.stringify({"inputs": InputText}),
-    //         }
-    //     );
-    //     const result = await response.blob();
-    //     return result;
-    // }
 
     async function query2() {
       const response = await fetch(
@@ -67,23 +49,12 @@ const TextToImage = () => {
 
         SetresultLoading2(false);
         SetresultLoading3(false);
-
         Setloading2(true);
         Setloading3(true);
-
         SetImageData2(loadingGif);
         SetImageData3(loadingGif);
 
         try{
-            //const [response1, response2, response3] = await Promise.all([query1(), query2, query3()]);
-
-            // const response4 = await query4();
-            // let x = URL.createObjectURL(response4)
-            // console.log("first: ", x);
-            // SetImageData4(x);
-            // Setloading4(false);
-            // SetresultLoading4(true);
-
             const response2 = await query2();
             let x = URL.createObjectURL(response2)
             SetImageData2(x);
@@ -101,7 +72,6 @@ const TextToImage = () => {
 
             Setloading2(false);
             Setloading3(false);
-
             SetresultLoading2(false);
             SetresultLoading3(false);
         }
@@ -163,17 +133,6 @@ const TextToImage = () => {
             <img src={bg2} className="rounded-2xl h-[400px] w-[500px] border-[3px] border-violet-800"/>
           }
 
-
-          {/* {
-            loading1 && 
-            <img src={loadingGif} className="rounded-2xl h-[400px] w-[500px]"/>
-          } */}
-
-          {/* {
-            (resultLoading4 || loading4)&& 
-            <img src={ImageData4} alt='ImageData' className="rounded-2xl h-[400px] w-[500px]"/>
-          } */}
-
           {
             (loading2 || loading3 || resultLoading2 || resultLoading3) &&  
             <div className="flex gap-7  px-8 py-7">
@@ -211,7 +170,6 @@ const TextToImage = () => {
           Generate Image
         </button>
 
-          
       </div>
     </div>
   )
