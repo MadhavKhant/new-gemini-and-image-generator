@@ -87,9 +87,15 @@ const GeminiAi = () => {
         <div className={`w-fit h-[400px] mx-auto overflow-y-auto rounded-3xl translate-y-[-30px] ${active ? "shadow-6xl" : ""}`}>
           {
             !loading && 
-            <div className={`pros overflow-y-auto max-w-[800px] ml-4 mt-2 text-black  px-4 py-4 rounded-3xl
-              ${active ? "backdrop-blur-md " : ""}`}
+            <div className={`pros overflow-y-auto max-w-[800px] ml-4 mt-2 text-black  px-4 py-4 rounded-3xl text-[18px]
+              ${active ? "backdrop-blur-lg " : ""}`}
               dangerouslySetInnerHTML={{__html: OutputData}}
+              // style={{
+              //   background: "linear-gradient(to bottom, white, #6b7280, #d4d4d8, black)", // Gradient for text color
+              //   WebkitBackgroundClip: "text", // Clip the gradient to the text only
+              //   WebkitTextFillColor: "transparent", // Make text transparent to reveal the gradient
+              //   color: "transparent", // Ensure proper fallback
+              // }}
             >
             </div> 
           }
