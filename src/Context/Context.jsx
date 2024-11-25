@@ -42,7 +42,6 @@ const ContextProvider = (props) => {
             }
         }
 
-        console.log("NewArray: ", NewArray);
         let NewArrayCopy = [...NewArray];
 
         for(let i=0; i<NewArray.length; i++)
@@ -67,13 +66,10 @@ const ContextProvider = (props) => {
             // }
         }
 
-        console.log("NewArray2: ", NewArrayCopy);
         
         let NewArrayJoin = NewArrayCopy.join(" ");
-        console.log("NewArray3: ", NewArrayJoin);
         const x = NewArrayJoin.split("*").join("<br/>");
         let y = x.split(" ");
-        console.log("Y: ", y);
         for(let i=0; i<y.length; i++)
         {
 
@@ -81,8 +77,6 @@ const ContextProvider = (props) => {
             delayPara(i, newWord+" ")
         }
 
-        console.log("X: ", x);
-        
         Setloading(false)
     }
 

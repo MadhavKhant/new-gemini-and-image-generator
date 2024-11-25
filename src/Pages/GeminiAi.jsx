@@ -19,12 +19,7 @@ const GeminiAi = () => {
 
   const [active, Setactive] = useState(false);
 
-  // useEffect(() => {
-  //   console.log("OUTPUT updated: ", OutputData);  // Logs whenever OutputData changes
-  // }, [OutputData]);
-
   useEffect(() => {
-
     if(OutputData.length === 0)
     {
       Setactive(false);
@@ -44,8 +39,6 @@ const GeminiAi = () => {
     localStorage.setItem("geminiActive", "true");
     onSent(inputValue)
   }
-
-  
 
   let bg = Geminibg
   //let bg = "https://as1.ftcdn.net/v2/jpg/05/71/51/90/1000_F_571519096_Jxn6PY3Xckf5XKDueIJsxEE18oBmb9rQ.jpg"
