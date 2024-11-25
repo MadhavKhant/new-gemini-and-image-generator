@@ -3,9 +3,8 @@ import homepagebg from '../assets/homepagebg.jpeg'
 import dragonImage from '../assets/dragon.png'
 import GeminiHomepageImage from '../assets/GeminiHomepageImage.png'
 
-
-let GeminiImage = dragonImage;
-let TextToImageImage = GeminiHomepageImage
+let GeminiImage = GeminiHomepageImage
+let TextToImageImage = dragonImage
 
 const HomePage = () => {
   return (
