@@ -3,6 +3,7 @@ import { IoMdSend } from "react-icons/io";
 import { Context } from "../Context/Context";
 import { Link } from "react-router-dom";
 import Geminibg from '../assets/Geminibg.jpg'
+import loaderGemini from '../assets/loaderGemini.gif'
 
 const GeminiAi = () => {
 
@@ -40,8 +41,8 @@ const GeminiAi = () => {
     onSent(inputValue)
   }
 
-  let bg = Geminibg
-  //let bg = "https://as1.ftcdn.net/v2/jpg/05/71/51/90/1000_F_571519096_Jxn6PY3Xckf5XKDueIJsxEE18oBmb9rQ.jpg"
+  //let bg = Geminibg
+  let bg = "https://i.pinimg.com/736x/8b/87/f6/8b87f68001da1cf6014a5e2040cb2664.jpg"
   
   return (
     <div
@@ -86,8 +87,24 @@ const GeminiAi = () => {
       >
         <div className={`w-fit h-[400px] mx-auto overflow-y-auto rounded-3xl translate-y-[-30px] ${active ? "shadow-6xl" : ""}`}>
           {
+            !active && !loading && 
+            <div className="bg-gradient-to-r from-pink-600 via-gray-500 to-yellow-400 
+              w-fit text-transparent bg-clip-text  text-[70px] mx-auto text-center
+              ">
+              Hello, put your prompt
+            </div>
+          }
+
+          {
+            loading && 
+            <div className=" rounded-full w-fit h-full overflow-hidden  mx-auto backdrop-blur-lg">
+              <img src={loaderGemini} className=" mx-auto scale-[70%] translate-y-[-100px]"/>
+            </div>
+          }
+
+          {
             !loading && 
-            <div className={`pros overflow-y-auto max-w-[800px] ml-4 mt-2 text-black  px-4 py-4 rounded-3xl text-[18px]
+            <div className={`pros overflow-y-auto max-w-[800px] ml-4 mt-2 text-green-400  px-4 py-4 rounded-3xl text-[18px]
               ${active ? "backdrop-blur-lg " : ""}`}
               dangerouslySetInnerHTML={{__html: OutputData}}
               // style={{
@@ -100,14 +117,6 @@ const GeminiAi = () => {
             </div> 
           }
 
-          {
-            !active && !loading && 
-            <div className="bg-gradient-to-r from-pink-600 via-gray-500 to-yellow-400 
-              w-fit text-transparent bg-clip-text  text-[70px] mx-auto text-center
-              ">
-              Hello, put your prompt
-            </div>
-          }
         </div>
 
         <div className="flex justify-center items-center w-fit mx-auto mb-5 mt-10 translate-y-[-20px]">
@@ -116,7 +125,7 @@ const GeminiAi = () => {
             onChange={(e) => SetinputValue(e.target.value)}
             placeholder="Enter Your prompt" 
             className=" border-[3px] border-yellow-300 w-[750px] max-h-[100px] min-h-[120px] bg-transparent
-              text-black text-lg rounded-3xl px-12 py-2 placeholder-gray-900 backdrop-blur-md "
+              text-yellow-400 text-lg rounded-3xl px-12 py-2 placeholder-gray-900 backdrop-blur-md "
           >
           </textarea>
             <button
