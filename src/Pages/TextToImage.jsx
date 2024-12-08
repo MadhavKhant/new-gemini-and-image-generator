@@ -46,38 +46,40 @@ const TextToImage = () => {
       return result;
     }
 
-    const Clickhandler = async () => {
+    const childClickhandler = async () => {
+      SetStartingImage(false);
+      SetresultLoading2(false);
+      SetresultLoading3(false);
+      Setloading2(true);
+      Setloading3(true);
+      SetImageData2(loadingGif);
+      SetImageData3(loadingGif);
 
-        SetStartingImage(false);
+      try{
+          const response2 = await query2();
+          let x = URL.createObjectURL(response2)
+          SetImageData2(x);
+          Setloading2(false);
+          SetresultLoading2(true);
 
-        SetresultLoading2(false);
-        SetresultLoading3(false);
-        Setloading2(true);
-        Setloading3(true);
-        SetImageData2(loadingGif);
-        SetImageData3(loadingGif);
+          const response3 = await query3();
+          let y = URL.createObjectURL(response3);
+          SetImageData3(y);
+          Setloading3(false);
+          SetresultLoading3(true);
+      }
+      catch(e){
+          console.error("Error fetching images:", e);
 
-        try{
-            const response2 = await query2();
-            let x = URL.createObjectURL(response2)
-            SetImageData2(x);
-            Setloading2(false);
-            SetresultLoading2(true);
+          Setloading2(false);
+          Setloading3(false);
+          SetresultLoading2(false);
+          SetresultLoading3(false);
+      }
+    }
 
-            const response3 = await query3();
-            let y = URL.createObjectURL(response3);
-            SetImageData3(y);
-            Setloading3(false);
-            SetresultLoading3(true);
-        }
-        catch(e){
-            console.error("Error fetching images:", e);
-
-            Setloading2(false);
-            Setloading3(false);
-            SetresultLoading2(false);
-            SetresultLoading3(false);
-        }
+    const Clickhandler = () => {
+        childClickhandler();
     }
     
     const handleChange = (e) => {
