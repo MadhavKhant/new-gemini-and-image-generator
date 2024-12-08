@@ -2,6 +2,9 @@ import {  useState } from "react";
 import loadingGif from '../assets/loadingGif.gif'
 // import AiImage from '../assets/AiImage.jpg'
 import { Link } from "react-router-dom";
+import ironmanImage from '../assets/smallironman.jpg'
+import minionImage from '../assets/minions.jpg'
+
 
 
 const TextToImage = () => {
@@ -85,8 +88,8 @@ const TextToImage = () => {
 
     //let bg = "https://assets.gatesnotes.com/8a5ac0b3-6095-00af-c50a-89056fbe4642/e675f5c2-624b-4efd-b82f-99e8a6ed968b/AI_20230215_new%20module_1200x580.jpg"
     //let bg = "https://cdn.impossibleimages.ai/wp-content/uploads/2023/04/25130031/AI-Background-Image-Generator-How-It-Works-and-Why-You-Need-It.jpg"
-    let bg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdcHSXlGZ-RZAypq71xPNX2T_R5sqy8nxdQw&s"
-    let bg2 = "https://d1joui61864gj3.cloudfront.net/2141516/md_sbdrqb_56f423ab538149e3cb2d2801c4a3d691199cb506.jpg"
+    let bg = minionImage
+    let bg2 = ironmanImage
   return (
     <div
       style={{
