@@ -160,15 +160,15 @@ const TextToImage = () => {
             />
         </div>
 
-        <button
+        <div
           onClick={Clickhandler}
           className='px-8 py-2 rounded-2xl bg-black text-yellow-500 transition-all duration-300
-          w-fit font-bold hover:bg-gray-700 hover:scale-95 text-[29px]
-          mx-auto
+          font-bold hover:bg-gray-300 hover:scale-95 text-[29px] hover:text-black
+          mx-auto hover:cursor-pointer w-fit h-fit border-2 border-green-400
           '
         >
           Generate Image
-        </button>
+        </div>
 
       </div>
     </div>
