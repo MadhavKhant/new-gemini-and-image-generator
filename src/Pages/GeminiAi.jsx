@@ -43,6 +43,10 @@ const GeminiAi = () => {
 
   //let bg = Geminibg
   let bg = "https://i.pinimg.com/736x/8b/87/f6/8b87f68001da1cf6014a5e2040cb2664.jpg"
+
+  useEffect(() => {
+    console.log("hi");
+  }, [])
   
   return (
     <div
