@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <Routes>
+      <Routes future={{ v7_relativeSplatPath: true }}>
         <Route path="/" element = {<HomePage/>}/> 
         <Route path="/Gemini" element = {<GeminiAi/>}/> 
         <Route path="/TextToImage" element = {<TextToImage/>}/> 
