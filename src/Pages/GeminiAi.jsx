@@ -20,14 +20,6 @@ const GeminiAi = () => {
 
   const [active, Setactive] = useState(false);
 
-
-  useEffect(() => {
-    console.log("int the homepage");
-    const apiKey = import.meta.env.VITE_GEMINI;
-    console.log("api key: ", apiKey);
-  }, [])
-
-
   useEffect(() => {
 
     if(OutputData.length === 0)
@@ -52,10 +44,6 @@ const GeminiAi = () => {
 
   //let bg = Geminibg
   let bg = "https://i.pinimg.com/736x/8b/87/f6/8b87f68001da1cf6014a5e2040cb2664.jpg"
-
-  useEffect(() => {
-    console.log("hi");
-  }, [])
   
   return (
     <div
