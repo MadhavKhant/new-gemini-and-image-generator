@@ -21,6 +21,11 @@ const GeminiAi = () => {
   const [active, Setactive] = useState(false);
 
   useEffect(() => {
+
+    console.log("into the gemini page");
+    const api = import.meta.env.VITE_GEMINI_API_K;
+    console.log("api key in page: ", api);
+
     if(OutputData.length === 0)
     {
       Setactive(false);
