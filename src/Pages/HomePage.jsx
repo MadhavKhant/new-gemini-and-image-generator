@@ -11,7 +11,7 @@ const HomePage = () => {
 
   useEffect(() => {
     console.log("int the homepage");
-    const apiKey = import.meta.env.VITE_GEMINI_API_K;
+    const apiKey = import.meta.env.VITE_GEMINI;
     const apiKey2 = import.meta.env.VITE_TOKEN;
     console.log("api key: ", apiKey);
     console.log("api key2: ", apiKey2);

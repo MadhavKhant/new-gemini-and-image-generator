@@ -23,7 +23,7 @@ const GeminiAi = () => {
 
   useEffect(() => {
     console.log("int the homepage");
-    const apiKey = import.meta.env.VITE_GEMINI_API_K;
+    const apiKey = import.meta.env.VITE_GEMINI;
     console.log("api key: ", apiKey);
   }, [])
 
