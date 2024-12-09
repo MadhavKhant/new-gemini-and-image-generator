@@ -2,11 +2,21 @@ import {Link} from 'react-router-dom'
 import homepagebg from '../assets/homepagebg.jpeg'
 import dragonImage from '../assets/dragon.png'
 import GeminiHomepageImage from '../assets/GeminiHomepageImage.png'
+import { useEffect } from 'react'
 
 let GeminiImage = GeminiHomepageImage
 let TextToImageImage = dragonImage
 
 const HomePage = () => {
+
+  useEffect(() => {
+    console.log("int the homepage");
+    const apiKey = import.meta.env.VITE_GEMINI_API_K;
+    console.log("api key: ", apiKey);
+  }, [])
+
+
+
   return (
     <div
       style={{

@@ -66,13 +66,11 @@ const ContextProvider = (props) => {
             // }
         }
 
-        
         let NewArrayJoin = NewArrayCopy.join(" ");
         const x = NewArrayJoin.split("*").join("<br/>");
         let y = x.split(" ");
         for(let i=0; i<y.length; i++)
         {
-
             const newWord = y[i];
             delayPara(i, newWord+" ")
         }

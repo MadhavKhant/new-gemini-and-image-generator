@@ -20,11 +20,15 @@ const GeminiAi = () => {
 
   const [active, Setactive] = useState(false);
 
-  useEffect(() => {
 
-    console.log("into the gemini page");
-    const api = import.meta.env.VITE_GEMINI_API_K;
-    console.log("api key in page: ", api);
+  useEffect(() => {
+    console.log("int the homepage");
+    const apiKey = import.meta.env.VITE_GEMINI_API_K;
+    console.log("api key: ", apiKey);
+  }, [])
+
+
+  useEffect(() => {
 
     if(OutputData.length === 0)
     {
