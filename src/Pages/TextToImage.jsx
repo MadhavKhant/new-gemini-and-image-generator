@@ -74,6 +74,7 @@ const TextToImage = () => {
 
   let bg = minionImage;
   let bg2 = ironmanImage;
+  
   return (
     <div
       style={{
