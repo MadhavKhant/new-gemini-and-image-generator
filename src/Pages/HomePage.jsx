@@ -77,6 +77,7 @@ const HomePage = () => {
             <span className='text-black text-[15px]'>Text to Image</span>
           </Link>
 
+
           <div 
             className='absolute w-[200px] h-[200px] bg-blue-700 rounded-full inset-0 -z-10 slow-flip2
             
