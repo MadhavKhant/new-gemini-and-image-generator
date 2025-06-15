@@ -15,6 +15,7 @@ const TextToImage = () => {
   const [StartingImageSet, SetStartingImage] = useState(true);
 
   const BackendURL = import.meta.env.VITE_BACKEND_URL;
+  console.log("BackendURL", BackendURL);
 
   const childClickhandler = async () => {
     SetStartingImage(false);
