@@ -44,6 +44,8 @@ const GeminiAi = () => {
 
   //let bg = Geminibg
   let bg = "https://i.pinimg.com/736x/8b/87/f6/8b87f68001da1cf6014a5e2040cb2664.jpg"
+
+  console.log('output data: ', OutputData);
   
   return (
     <div
@@ -108,7 +110,7 @@ const GeminiAi = () => {
             !loading && 
             <div className={`pros overflow-y-auto max-w-[800px] ml-4 mt-2 text-green-400  px-4 py-4 rounded-3xl text-[18px]
               ${active ? "backdrop-blur-lg " : ""}`}
-              dangerouslySetInnerHTML={{__html: OutputData}}
+              dangerouslySetInnerHTML={{__html: OutputData.replace(/<b>/g, '<b style="color: red;">')}}
               // style={{
               //   background: "linear-gradient(to bottom, white, #6b7280, #d4d4d8, black)", // Gradient for text color
               //   WebkitBackgroundClip: "text", // Clip the gradient to the text only
